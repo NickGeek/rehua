@@ -70,7 +70,15 @@ function search(list = baseURL.substring(0, baseURL.lastIndexOf("/") + 1)+'/list
 				continue;
 			}
 
-			if (site.name.toLowerCase().indexOf(query.toLowerCase()) === -1 && site.hash !== query)
+			var query_terms = query.toLowerCase().split(" ");
+			var matched = false;
+			for (var j = 0; j < query_terms.length; j++) {
+				var q = query_terms[j];
+				if (site.name.toLowerCase().indexOf(q.toLowerCase()) > -1)
+					matched = true;
+			}
+
+			if (!matched && site.hash !== query)
 				continue;
 			
 			if (sites[site.hash]) {
