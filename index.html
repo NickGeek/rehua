@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rehua - A Search Engine for IPFS</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="#ify (Hashify) is a social search engine that uses hashtags to rank content.">
+	<meta name="author" content="Etheral Studios">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+	<div class="fixed">
+		<nav class="top-bar" data-topbar>
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Rehua - A Search Engine for IPFS</a></h1>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="search">
+				<center>
+					<form action="javascript:runSearch();" method="get">
+						<div class="row collapse">
+							<div class="small-10 large-10 columns">
+								<input id="query" type="text" name="query" placeholder="Enter a name or hash" autocomplete=off>
+							</div>
+							<div class="small-2 large-2 columns">
+								<input type="submit" name="submit" value="Search" class="button postfix">
+							</div>
+						</div>
+					</form>
+				</center>
+			</div>
+	
+			<div id="results">
+			</div>
+
+			<hr />
+			<div class="about">
+				<h2>What is IPFS?</h2>
+				<p>
+					The InterPlanetary File System (IPFS) is a new hypermedia distribution protocol, addressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to make the web faster, safer, and more open.<br /><br />
+
+					Find out more at <a href="https://ipfs.io" target="_blank">http://ipfs.io</a>.
+				</p>
+
+				<h2>How can I put something on here?</h2>
+				<p>
+					Because Rehua is decentralised you actually don't directly give it your hashes. Rehua works by having a selection of 'friends', which are hashes pointing towards other people's lists of hashes. This results in an exponential growth of results, because each 'friend' can have more 'friends'. If your sites aren't on any friends lists, just create a list and find a recognised list to add yourself to.<br /><br />
+
+					The easiest thing to do in this instance is to <a href="mailto:nick@nick.geek.nz" target="_blank">email me</a> with the hash of your list.
+				</p>
+					<h3>How do I make a list?</h3>
+					<p>A list is a JSON object. I have made <a href="listmaker.html">this tool</a> to generate them.</p>
+				
+				<h2>Who is Rehua?</h2>
+				<p>
+					<a href="https://en.wikipedia.org/wiki/Rehua" target="_blank">Rehua</a> is a figure from <a href="https://en.wikipedia.org/wiki/M%C4%81ori_mythology" target="_blank">Māori mythology</a>.
+				</p>
+
+				<h2>Is this open source?</h2>
+				<p>
+					Yes! You can find Rehua on <a href="https://github.com/NickGeek/rehua">GitHub</a> under the MPLv2.
+				</p>
+			</div>
+		</div>
+		<p id="footer">
+			Copyright &copy; <a href="http://nick.geek.nz">Nick Webster</a>
+		</p>
+
+		<script type="text/javascript" src="search.js"></script>
+	</body>
+	</html>
