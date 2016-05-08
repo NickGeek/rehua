@@ -19,6 +19,39 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<h1>List Maker</h1>
+			<p>
+				When you have your list finished, just copy the code into a file (usually called list.json) and put it on IPFS.
+			</p>
+			<p>
+				You can do this in two ways:<br />
+				<strong>Host with IPFS (note: once the list has been put up it can't be modified):</strong><br />
+				<code>$ ipfs add list.json</code><br />
+				<code><strong>added <em>hash</em> list.json</strong></code><br />
+				<code>$ ipfs pin add <em>hash</em></code><br />
+				Now, get your <em>hash</em> on another person's list in the FSfriends section.<br />
+
+				<strong>Host with IPNS:</strong><br />
+				<code>$ ipfs add -r <em>folder_with_list.json_in_it</em></code><br />
+				<code><strong>added <em>hash</em> <em>folder_with_list.json_in_it</em></strong></code><br />
+				<code>$ ipfs pin add -r <em>hash</em></code><br />
+				<code>$ ipfs name publish <em>hash</em></code><br />
+				<code><strong>Published to <em>ipns_hash</em>: <em>hash</em></strong></code><br />
+				Now, get your <em>ipns_hash</em> on another person's list in the NSfriends section.
+			</p>
+			<hr />
+
+			<form action="javascript:submitJSON();">
+				<textarea id="jsonText" placeholder="Paste your list here"></textarea>
+				<input type="submit" name="submit" value="Send list to editor" class="button">
+			</form>
+
+			<h3>Editor</h3>
+			<h4>Friends</h4>
+			<input id="inputFriendHash" type="text" autocomplete=off placeholder="Friend's Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
+
+			<h4>Sites</h4>
+			<input id="inputName" type="text" autocomplete=off placeholder="Website Name" />
+			<input id="inputSiteHash" type="text" autocomplete=off placeholder="Website Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
 		</div>
 
 		<p id="footer">
