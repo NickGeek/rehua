@@ -47,9 +47,11 @@
 
 			<h3>Editor</h3>
 			<h4>Friends</h4>
-			<input id="inputFriendHash" type="text" autocomplete=off placeholder="Friend's Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
-			<input class="inputFriendProtocol" name="inputFriendProtocol" type="radio" value="IPFS" /> IPFS
-			<input class="inputFriendProtocol" name="inputFriendProtocol" type="radio" value="IPNS" checked="true" /> IPNS
+			<div id="friends">
+				<input id="inputFriendHash-1" type="text" autocomplete=off placeholder="Friend's Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
+				<input class="inputFriendProtocol-1" name="inputFriendProtocol-1" type="radio" value="IPFS" /> IPFS
+				<input class="inputFriendProtocol-1" name="inputFriendProtocol-1" type="radio" value="IPNS" checked="true" /> IPNS
+			</div>
 
 			<h4>Sites</h4>
 			<input id="inputName" type="text" autocomplete=off placeholder="Website Name" />
@@ -62,6 +64,6 @@
 			Copyright &copy; <a href="http://nick.geek.nz">Nick Webster</a>
 		</p>
 
-		<script type="text/javascript" src="listMaker.js"></script>
+		<script type="text/javascript" src="listmaker.js"></script>
 	</body>
 	</html>
