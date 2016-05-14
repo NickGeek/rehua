@@ -48,7 +48,7 @@ function submitJSON() {
 		sites.push(site);
 	}
 
-	//Display friends and sites
+	//Display friends
 	for (var i = 0; i < friends.length; i++) {
 		var friend = friends[i];
 		var div = document.getElementById('friends');
@@ -63,7 +63,26 @@ function submitJSON() {
 		else {
 			ipnsCheck = 'checked="true"';
 		}
-		div.innerHTML += '<input id="inputFriendHash{0}" type="text" autocomplete=off placeholder="Friend\'s Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" value="{3}" /><input class="inputFriendProtocol{0}" name="inputFriendProtocol" type="radio" value="IPFS" {1} /> IPFS<input class="inputFriendProtocol{0}" name="inputFriendProtocol" type="radio" value="IPNS" {2} /> IPNS'.format(i, ipfsCheck, ipnsCheck, friend.hash);
+		div.innerHTML += '<input id="inputFriendHash{0}" type="text" autocomplete=off placeholder="Friend\'s Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" value="{3}" /><input class="inputFriendProtocol{0}" name="inputFriendProtocol{0}" type="radio" value="IPFS" {1} /> IPFS <input class="inputFriendProtocol{0}" name="inputFriendProtocol{0}" type="radio" value="IPNS" {2} /> IPNS'.format(i, ipfsCheck, ipnsCheck, friend.hash);
 	}
-	div.innerHTML = '<input id="inputFriendHash{0}" type="text" autocomplete=off placeholder="Friend\'s Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" /><input class="inputFriendProtocol{0}" name="inputFriendProtocol" type="radio" value="IPFS" /> IPFS<input class="inputFriendProtocol{0}" name="inputFriendProtocol" type="radio" value="IPNS" checked /> IPNS'.format(friends.length) + div.innerHTML;
+	div.innerHTML = '<input id="inputFriendHash{0}" type="text" autocomplete=off placeholder="Friend\'s Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" /><input class="inputFriendProtocol{0}" name="inputFriendProtocol{0}" type="radio" value="IPFS" /> IPFS <input class="inputFriendProtocol{0}" name="inputFriendProtocol{0}" type="radio" value="IPNS" checked="true" /> IPNS'.format(friends.length) + div.innerHTML;
+
+	//Display Sites
+	for (var i = 0; i < sites.length; i++) {
+		var site = sites[i];
+		var div = document.getElementById('sites');
+		if (i === 0)
+			div.innerHTML = "";
+
+		var ipfsCheck = "";
+		var ipnsCheck = "";
+		if (site.protocol === "ipfs") {
+			ipfsCheck = 'checked="true"';
+		}
+		else {
+			ipnsCheck = 'checked="true"';
+		}
+		div.innerHTML += '<input id="inputName{0}" type="text" autocomplete=off placeholder="Website Name" value="{1}" /> <input id="inputSiteHash{0}" type="text" autocomplete=off placeholder="Website Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" value="{2}" /> <input class="inputSiteProtocol{0}" name="inputSiteProtocol{0}" type="radio" value="IPFS" {3} /> IPFS <input class="inputSiteProtocol{0}" name="inputSiteProtocol{0}" type="radio" value="IPNS" {4} /> IPNS</div>'.format(i, site.name, site.hash, ipfsCheck, ipnsCheck);
+	}
+	div.innerHTML = '<input id="inputName{0}" type="text" autocomplete=off placeholder="Website Name" /> <input id="inputSiteHash{0}" type="text" autocomplete=off placeholder="Website Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" /> <input class="inputSiteProtocol{0}" name="inputSiteProtocol{0}" type="radio" value="IPFS" checked="true" /> IPFS <input class="inputSiteProtocol{0}" name="inputSiteProtocol{0}" type="radio" value="IPNS" /> IPNS</div>'.format(sites.length) + div.innerHTML;
 }

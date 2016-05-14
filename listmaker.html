@@ -40,10 +40,9 @@
 			</p>
 			<hr />
 
-			<form action="javascript:submitJSON();">
-				<textarea id="jsonText" placeholder="Paste your list here"></textarea>
-				<input type="submit" name="submit" value="Send list to editor" class="button">
-			</form>
+			<textarea id="jsonText" placeholder="Paste your list here"></textarea>
+			<a href="javascript:submitJSON();" class="button">🡫</a>
+			<a href="javascript:makeJSON();" class="button">🡩</a>
 
 			<h3>Editor</h3>
 			<h4>Friends</h4>
@@ -54,11 +53,12 @@
 			</div>
 
 			<h4>Sites</h4>
-			<input id="inputName" type="text" autocomplete=off placeholder="Website Name" />
-			<input id="inputSiteHash" type="text" autocomplete=off placeholder="Website Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
-			<input class="inputSiteProtocol" name="inputSiteProtocol" type="radio" value="IPFS" checked="true" /> IPFS
-			<input class="inputSiteProtocol" name="inputSiteProtocol" type="radio" value="IPNS" /> IPNS
-		</div>
+			<div id="sites">
+				<input id="inputName-1" type="text" autocomplete=off placeholder="Website Name" />
+				<input id="inputSiteHash-1" type="text" autocomplete=off placeholder="Website Hash (e.g QmeL2BzYEQE99wqWnVY2pmypHbPeLLcv29hu5nA3ZRS255)" />
+				<input class="inputSiteProtocol-1" name="inputSiteProtocol-1" type="radio" value="IPFS" checked="true" /> IPFS
+				<input class="inputSiteProtocol-1" name="inputSiteProtocol-1" type="radio" value="IPNS" /> IPNS</div>
+			</div>
 
 		<p id="footer">
 			Copyright &copy; <a href="http://nick.geek.nz">Nick Webster</a>
