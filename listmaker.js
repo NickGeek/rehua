@@ -142,7 +142,7 @@ function makeJSON() {
 		var name = document.getElementById("inputName"+id).value;
 		var protocol = document.querySelector('input[name="inputSiteProtocol{0}"]:checked'.format(id)).value.toLowerCase();
 
-		if (hash.length > 0 && protocol.length > 0) {
+		if (hash.length > 0 && protocol.length > 0 && name.length > 0) {
 			var site = {
 				name: name,
 				protocol: protocol,
