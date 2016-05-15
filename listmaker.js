@@ -97,7 +97,12 @@ function makeJSON() {
 
 	for (var i = 0; i < friendsInputs.length; i++) {
 		var element = friendsInputs[i];
-		var id = element.id.slice(-1);
+		try {
+			var id = parseInt(element.id.match(/\d+$/)[0], 10);
+		}
+		catch(e) {
+			continue;
+		}
 		console.log("Friend: {0}".format(element.id));
 		if (id.length > 0)
 			friendIDs.push(id);
@@ -105,10 +110,14 @@ function makeJSON() {
 
 	for (var i = 0; i < sitesInputs.length; i++) {
 		var element = sitesInputs[i];
-		var id = element.id.slice(-1);
+		try {
+			var id = parseInt(element.id.match(/\d+$/)[0], 10);
+		}
+		catch(e) {
+			continue;
+		}
 		console.log("Site: {0}".format(element.id));
-		if (id.length > 0)
-			siteIDs.push(id);
+		siteIDs.push(id);
 	}
 
 	//Remove duplicates. Thanks to http://stackoverflow.com/a/14821032/998467
