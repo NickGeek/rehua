@@ -143,6 +143,8 @@ function searchDeeper() {
 }
 
 function runSearch() {
+	var resultsDiv = document.getElementById('results');
+	resultsDiv.innerHTML = "<h3>Searching…</h3>";
 	sites = {};
 	pendingFriends = [];
 	usedFriends = [];
