@@ -10,5 +10,5 @@ os.system('ipfs pin add -r {}'.format(contents))
 os.system('ipfs name publish {}'.format(contents))
 
 while 1:
-	time.sleep(600)
+	time.sleep(300)
 	os.system('ipfs name publish {}'.format(contents))

@@ -7,4 +7,5 @@ cd host
 echo $HASH > latest_hash.txt
 
 forever stopall
-echo "Restart rehua with forever to update. (The command to start is 'forever start -c python3 hostRehua.py')"
+forever start -c python3 hostRehua.py
+forever list
