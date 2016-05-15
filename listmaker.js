@@ -104,8 +104,7 @@ function makeJSON() {
 			continue;
 		}
 		console.log("Friend: {0}".format(element.id));
-		if (id.length > 0)
-			friendIDs.push(id);
+		friendIDs.push(id);
 	}
 
 	for (var i = 0; i < sitesInputs.length; i++) {
