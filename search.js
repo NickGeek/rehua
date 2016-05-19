@@ -134,8 +134,6 @@ function searchDeeper() {
 	for (var i = 0; i < pendingFriends.length; i++) {
 		var friend = pendingFriends[i];
 		var list = "{0}/{1}/{2}".format(location.origin, friend.protocol, friend.hash);
-		if (friend.protocol == "ipns")
-			list += "/list.json";
 
 		search(list)
 	}
