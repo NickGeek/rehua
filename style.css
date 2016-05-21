@@ -1,5 +1,1 @@
-@import url('foundation.css');
-
-body{
-	padding-top: 60px;
-}
+@import "foundation.css";body{padding-top:60px}
