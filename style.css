@@ -35,6 +35,10 @@ footer {
 	color: #fff;
 }
 
-footer a:link, footer a:visited, footer a:hover, footer a:active {
+footer a:link, footer a:visited {
 	color: #fff;
+}
+
+footer a:hover, footer a:active {
+	text-decoration: underline;
 }
