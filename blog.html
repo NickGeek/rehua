@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blog Title - Rehua - A Directory for IPFS</title>
+	<title>Loading Posts... | Rehua - A Directory for IPFS</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Rehua is a directory for IPFS">
 	<meta name="author" content="Nick Webster">
@@ -9,34 +9,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="loadPosts();">
 	<div class="fixed">
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="."><strong>Blog Title</strong> | Rehua - A Directory for IPFS</a></h1>
+					<h1><a href="."><strong id="title">Loading Posts...</strong> | Rehua - A Directory for IPFS</a></h1>
 				</li>
 			</ul>
 		</nav>
 	</div>
 
 	<div class="row">
-		<div class="large-12 columns">
-			<div id="0" class="post">
-				<h1 class="postTitle">Post Title</h1> 
-				<i class="postInfo">by <a href="http://nick.geek.nz">Nick Webster</a> | Sat, 21 May 2016 08:26:30 GMT</i>
-				<p>blah blah blah</p>
-			</div>
-			<hr /><div id="0" class="post">
-				<h1 class="postTitle">Post Title</h1> 
-				<i class="postInfo">by Nick Webster | Sat, 21 May 2016 08:26:30 GMT</i>
-				<p>blah blah blah</p>
-			</div>
+		<div id="posts" class="large-12 columns">
 		</div>
 	</div>
 		
 
-	<script type="text/javascript" src="search.js"></script>
+	<script type="text/javascript" src="showdown.min.js"></script>
+	<script type="text/javascript" src="blog.js"></script>
 </body>
 <footer>Rehua is made by <a href="http://nick.geek.nz">Nick Webster</a></footer>
 </html>
