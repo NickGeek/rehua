@@ -1,1 +1,40 @@
-@import "foundation.css";body{padding-top:60px}
+@import "foundation.css";
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body{
+	padding-top:60px;
+	
+}
+
+.row {
+	margin-bottom: 40px;
+}
+
+.postTitle {
+	margin-bottom: 0px;
+	display: inline;
+}
+.postInfo {
+	color: #808080;
+	font-style: italic;
+	font-size:  0.9em;
+	padding-bottom: 4px;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	height: 40px;
+	width: 100%;
+	background: #333333;
+	color: #fff;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+	color: #fff;
+}

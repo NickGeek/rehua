@@ -23,21 +23,26 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="search">
-				<center>
-					<form action="javascript:runSearch();" method="get">
-						<div class="row collapse">
-							<div class="small-10 large-10 columns">
-								<input id="query" type="text" name="query" placeholder="Enter a name or hash" autocomplete=off>
-							</div>
-							<div class="small-2 large-2 columns">
-								<input type="submit" name="submit" value="Search" class="button postfix">
-							</div>
+				<form action="javascript:runSearch();" method="get">
+					<div class="row collapse">
+						<div class="small-10 large-10 columns">
+							<input id="query" type="text" name="query" placeholder="Enter a name or hash" autocomplete=off>
 						</div>
-					</form>
-				</center>
+						<div class="small-2 large-2 columns">
+							<input type="submit" name="submit" value="Search" class="button postfix">
+						</div>
+					</div>
+				</form>
 			</div>
-	
 			<div id="results">
+			</div>
+
+			<h4>Random Rehua blogs:</h4>
+			<div id="randomBlogPosts">
+				<ul>
+					<li><a href="#">The Official Rehua Blog</a></li>
+					<li><a href="#">Nick Webster's corner of IPFS</a></li>
+				</ul>
 			</div>
 
 			<hr />
@@ -69,10 +74,9 @@
 				</p>
 			</div>
 		</div>
-		<p id="footer">
-			Copyright &copy; <a href="http://nick.geek.nz">Nick Webster</a>
-		</p>
+	</div>
 
-		<script type="text/javascript" src="search.js"></script>
-	</body>
-	</html>
+	<script type="text/javascript" src="search.js"></script>
+</body>
+<footer>Rehua is made by <a href="http://nick.geek.nz">Nick Webster</a></footer>
+</html>
