@@ -81,7 +81,7 @@ function loadPosts() {
 				postsDiv.innerHTML += newHTML;
 			}
 
-			document.title = "{0} | {1}".format(json.name, document.title);
+			document.title = "{0} | Rehua - A Directory for IPFS".format(json.name, document.title);
 			document.getElementById('title').innerHTML = json.name;
 		});
 	}
